@@ -17,7 +17,8 @@ $$
     \frac{-1}{6} & \frac{1}{2} & \frac{-1}{2} & \frac{1}{6}
 \end{bmatrix}
 $$
-$$P(t)=
+```math
+P(t)=
 \begin{bmatrix}
     1 & t & t^2 & t^3
 \end{bmatrix}
@@ -26,6 +27,7 @@ $$P(t)=
     \frac{-1}{2} & 0 & \frac{1}{2} & 0 \\
     \frac{1}{2} & -1 & \frac{1}{2} & 0 \\
     \frac{-1}{6} & \frac{1}{2} & \frac{-1}{2} & \frac{1}{6}
-\end{bmatrix}$$
+\end{bmatrix}
+```
 #### 1.3 Optimizations on the branch radiuses
 As the radiuses will be computed recursively, in order to avoid repeated computation, I use memoization, by saving each computed radius in its corresponings node inner data.
