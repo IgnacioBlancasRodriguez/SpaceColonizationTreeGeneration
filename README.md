@@ -31,3 +31,15 @@ P(t)=
 ```
 #### 1.3 Optimizations on the branch radiuses
 As the radiuses will be computed recursively, in order to avoid repeated computation, I use memoization, by saving each computed radius in its corresponings node inner data.
+
+### 2. Generalized Cylinders
+In order to add volume to our tree we will be using generalized cylinders. The cylinder will be made up of circles centered on each node and porjected on the plane whose normal vector is the vector tangent to the skeleton at the coordinates of the given node.
+
+In order to do project each circle on its respective plane, we will be calculating two basis vectors in that plane. We will do so by rotating the vectors $\vec{i}$, and $\vec{j}$ along the skeleton. This alone, however, may lead to unnecesary twisting where the tangent vectors between two nodes change direction from a downward pointing one to an upward pointing one. In order to mitigate this, each time a refference frame is calculated, we will save its respective $\vec{i}$, $\vec{j}$, and $\vec{T}$, also reffered to as, $\vec{B}$, $\vec{N}$, and $\vec{T}$ vectors, and calculating the new refference frames based on those of its children node. This is done by generating the quaternion representing the rotation from the children node's $\vec{T}$ and the current node's $\vec{T}$ vector, and then applying these to the children node's $\vec{B}$, and $\vec{N}$ vectors, to form the current node's respective vectors.
+
+We will use the following procedure to calculate the quaternion representing the rotation from un vector to another one:
+```math
+q = cos(\alpha) + sin(\alpha)\dot(a\vec{i} + b\vec{j} + c\vec{k})
+a\vec{i} + b\vec{j} + c\vec{k} = \vec{T} \cross \vec{T_{prev}}
+\alpha = tan^{-1}()
+```
