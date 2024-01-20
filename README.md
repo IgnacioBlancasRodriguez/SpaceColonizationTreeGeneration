@@ -45,5 +45,5 @@ q = cos(\alpha) + sin(\alpha)\cdot(a\vec{i} + b\vec{j} + c\vec{k})
 a\vec{i} + b\vec{j} + c\vec{k} = \vec{T} \times \vec{T_{prev}}
 ```
 ```math
-\alpha = tan^{-1}(\frac{\lvert \vec{T} \ times \vec{T_{prev}} \rvert}{\vec{T} \cdot \vec{T_{prev}}})
+\alpha = tan^{-1}(\frac{\lvert \vec{T} \times \vec{T_{prev}} \rvert}{\vec{T} \cdot \vec{T_{prev}}})
 ```
