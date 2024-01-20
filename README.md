@@ -42,8 +42,8 @@ We will use the following procedure to calculate the quaternion representing the
 q = cos(\alpha) + sin(\alpha)\cdot(a\vec{i} + b\vec{j} + c\vec{k})
 ```
 ```math
-a\vec{i} + b\vec{j} + c\vec{k} = \vec{T} \times \vec{T_{prev}}
+a\vec{i} + b\vec{j} + c\vec{k} = \vec{T_{prev}} \times \vec{T}
 ```
 ```math
-\alpha = tan^{-1}(\frac{\lvert \vec{T} \times \vec{T_{prev}} \rvert}{\vec{T} \cdot \vec{T_{prev}}})
+\alpha = tan^{-1}(\frac{\lvert \vec{T_{prev}} \times \vec{T} \rvert}{\vec{T_{prev}} \cdot \vec{T}})
 ```
