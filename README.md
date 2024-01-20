@@ -39,7 +39,11 @@ In order to do project each circle on its respective plane, we will be calculati
 
 We will use the following procedure to calculate the quaternion representing the rotation from un vector to another one:
 ```math
-q = cos(\alpha) + sin(\alpha)\cdot(a\vec{i} + b\vec{j} + c\vec{k}) \\
-a\vec{i} + b\vec{j} + c\vec{k} = \vec{T} \times \vec{T_{prev}} \\
-\alpha = tan^{-1}()
+q = cos(\alpha) + sin(\alpha)\cdot(a\vec{i} + b\vec{j} + c\vec{k})
+```
+```math
+a\vec{i} + b\vec{j} + c\vec{k} = \vec{T} \times \vec{T_{prev}}
+```
+```math
+\alpha = tan^{-1}(\frac{\lvert \vec{T} \ times \vec{T_{prev}} \rvert}{\vec{T} \cdot \vec{T_{prev}}})
 ```
