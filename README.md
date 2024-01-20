@@ -9,14 +9,14 @@ The project follows some of the notions outlied in [Modeling Trees with a Space 
 In order to avoid repeated computation and accelerate the tree skeleton generation, on every iteration only those nodes that have been associated to one or more attractors will be visited when generating new nodes, instead of visiting all of the attractors. In cases were several attractors have been associated to a singular node, this reduces the amount of times a node is visited.
 #### 1.2 Optimizations on the BSplines
 To accelerate the BSplines, as I am using a uniform BSplines, my basis functions stay the same accross the whole curve and thus I could build a matrix to represent the curve in its matrix form, that would stay consistent along the whole curve. In order for the curve to achieve $C^2$ continity a system of 16 by 16 equations is solved to yield the following matrix:
-$$
+```math
 \begin{bmatrix}
     \frac{1}{6} & \frac{2}{3} & \frac{1}{6} & 0 \\
     \frac{-1}{2} & 0 & \frac{1}{2} & 0 \\
     \frac{1}{2} & -1 & \frac{1}{2} & 0 \\
     \frac{-1}{6} & \frac{1}{2} & \frac{-1}{2} & \frac{1}{6}
 \end{bmatrix}
-$$
+```
 ```math
 P(t)=
 \begin{bmatrix}
