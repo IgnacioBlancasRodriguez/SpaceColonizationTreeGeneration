@@ -47,3 +47,10 @@ a\vec{i} + b\vec{j} + c\vec{k} = \vec{T_{prev}} \times \vec{T}
 ```math
 \alpha = tan^{-1}(\frac{\lvert \vec{T_{prev}} \times \vec{T} \rvert}{\vec{T_{prev}} \cdot \vec{T}})
 ```
+
+### 3. Mutlithreading
+In order to ensure that the application is still running and able to be closed if the tree generation algorithm runs into an infinite loop. To achieve this, the program calls on a "control thread" with the task of generating the tree skeleton and the tree cylinders.
+
+### 4. Showcase images
+![Cylinder view](images/TreeCylinders.png)
+![Node view](images/NodeView.png)
